@@ -1,23 +1,32 @@
-# Cover Letter Generator
+# Letter Llama 🦙
 
-A Streamlit web application that generates customized cover letters using a fine-tuned LLM model through Ollama.
+An AI-powered cover letter generator that creates personalized cover letters using fine-tuned LLaMA models.
 
-## Features
-- Customizable cover letter generation
-- User-friendly interface
-- Integration with Ollama for local LLM inference
+## Model Details 🧠
+This project uses a fine-tuned version of LLaMA 3.2 3B, trained on the [ShashiVish/cover-letter-dataset](https://huggingface.co/datasets/ShashiVish/cover-letter-dataset) using [Unsloth](https://github.com/unslothai/unsloth) for efficient training.
+
+### Training Details
+- Base Model: LLaMA 3.2 3B
+- Dataset: [Cover Letter Dataset](https://huggingface.co/datasets/ShashiVish/cover-letter-dataset)
+- Training Framework: Unsloth
+- Training Type: LoRA fine-tuning
+
+## Features 🌟
+- Custom cover letter generation
+- Ollama integration for local LLM inference
 - Dark mode UI
-- Download options in multiple formats
+- Multiple download formats
+- Easy-to-use interface
 
-## Setup
-1. Install required packages:
+## Setup 🚀
+1. Install dependencies:
 ```bash
-pip install streamlit requests
+pip install -r requirements.txt
 ```
 
 2. Install Ollama from https://ollama.ai/
 
-3. Create the custom model in Ollama:
+3. Set up the model:
 ```bash
 # Create Modelfile
 echo "FROM llama3.2:3b
@@ -27,19 +36,31 @@ ADAPTER /path/to/your/model" > Modelfile
 ollama create coverletter-custom -f Modelfile
 ```
 
-4. Run the application:
+4. Run the app:
 ```bash
 streamlit run app.py
 ```
 
-## Usage
-1. Fill in the job details and your information
-2. Adjust generation settings if needed
-3. Click "Generate Cover Letter"
-4. Review and download the generated cover letter
+## Usage 📝
+1. Fill in job details
+2. Add your information
+3. Click Generate
+4. Download your cover letter
 
-## Requirements
-- Python 3.10+
+## Tech Stack 💻
+- Python
 - Streamlit
 - Ollama
-- Internet connection for model download
+- LLaMA 3.2
+- Unsloth (for training)
+
+## Model Training 🔬
+The model was fine-tuned using Unsloth, an efficient training framework for LLMs. Training details and code can be found in the `training` directory. The dataset used contains various professional cover letters, helping the model learn proper structure and content.
+
+## Contributing 🤝
+Feel free to open issues or PRs if you have suggestions for improvements!
+
+## Acknowledgments 👏
+- [ShashiVish](https://huggingface.co/ShashiVish) for the cover letter dataset
+- [Unsloth](https://github.com/unslothai/unsloth) for the efficient training framework
+- [Ollama](https://ollama.ai/) for the local model serving
