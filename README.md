@@ -57,8 +57,6 @@ streamlit run app.py
 ## Model Training 🔬
 The model was fine-tuned using Unsloth, an efficient training framework for LLMs. Training details and code can be found in the `training` directory. The dataset used contains various professional cover letters, helping the model learn proper structure and content.
 
-## Contributing 🤝
-Feel free to open issues or PRs if you have suggestions for improvements!
 
 ## Acknowledgments 👏
 - [ShashiVish](https://huggingface.co/ShashiVish) for the cover letter dataset
