@@ -240,7 +240,7 @@ st.markdown("""---""")
 st.markdown(
     """
     <div style='text-align: center'>
-        <p>Built with ❤️ using Streamlit and Ollama</p>
+        <p>Built with ☕  and Ollama</p>
     </div>
     """,
     unsafe_allow_html=True)
