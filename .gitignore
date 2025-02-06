@@ -1,4 +1,4 @@
-# Python
+echo "# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -41,5 +41,18 @@ ehthumbs.db
 Thumbs.db
 Modelfile
 
+# Model files
+final_model/
+adapter_config.json
+adapter_model.safetensors
+tokenizer_config.json
+special_tokens_map.json
+tokenizer.json
+*.safetensors
+*.bin
+*.model
+*.gguf
+
 # Streamlit
 .streamlit/
+Modelfile" > .gitignore
